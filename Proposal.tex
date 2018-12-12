@@ -29,7 +29,7 @@
 
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-We will be creating a similar game in the vein of Flappy Bird, which we are calling "Leaping Llamas." If the initial challenge proves to be trivial, we intend to add combat elements to increase the difficulty. Players looking for a casual yet challenging game should enjoy Leaping Llamas.
+We have be created a side-scrolling game where the player dodges obstacles to gather points for highscores, which we are calling "Leaping Llamas." we have added difficulty elements to increase the difficulty as preferred. Players looking for a casual yet challenging game should enjoy Leaping Llamas.
 \end{abstract}
 }
 \maketitle
@@ -40,8 +40,7 @@ We will be creating a similar game in the vein of Flappy Bird, which we are call
 \section{Introduction}
 	The goal of this project is to create a simple yet fun game that can be played by anyone on a windows computer using only a mouse and keyboard.  For the type and content of the game we decided to go with a similar style to the popular game “Flappy Bird”.  At minimum we would like to include all of the basic functionality of the original game, so things like the auto generated level that is continuous and a high score system will definitely be incorporated into the app.
 	
-	Once all of the basic functionality described above is implemented we have plans to add additional functionality including variable difficulty settings and possibly even a “bullet hell” type game mode. We’re confident this will not only be an enjoyable experience for us the creators, but we also believe it will be fun for our peers to play post launch. By taking the “Flappy Bird” formula and making a more challenging experience, we think we can make a game that is relatively simple, but ultimately hard to master.
- 
+	Once all of the basic functionality described above is implemented we have added additional functionality including variable difficulty settings of Easy, Normal, and Hard. We’re confident this will not only be an enjoyable experience for us the creators, but we also believe it will be fun for our peers to play post launch. By taking the “Flappy Bird” formula and making a more challenging experience, we think we can make a game that is relatively simple, but ultimately hard to master. 
 
 \subsection{Background}
 	"Flappy Bird" is a game where the player controls a small bird, using inputs to lift the bird in order to navigate through pipes. Gravity pushes the bird down, but inputs can easily send the bird too high.
@@ -193,7 +192,7 @@ We choose to make the difficulty button change to the current difficulty upon cl
 As for the game portion we made the `esc' and `p' keys shortcuts to ending the game instantly and pausing the game respectfully. We also made the portion of the screen above the main screen inaccessible.
 
 \subsection{UML Outline}
-See Figure \ref{dia}.
+See Figure \ref{dia}. The user starts the main that calls the StartMenu. Inside the StartMenu you can select a different skin for your llama which calls the Decorator Pattern SkinDecorator \& SkinSelect. You can also choose the preferred difficulty that uses the strategy pattern and chooses the same difficulty classes of Easy, Normal, or Hard based upon the the Difficulty Interface which controls the fences in the GameScreen. Then once the user hits a game over the program automatically takes them to HighScore Window with all the locally stored highscores and if the user made a new one the HighScoreInput also gets called. Finally the user can choose the return to the Gamescreen or get sent to the StartMenu again to exit.
 
 \begin{sidewaysfigure}[!ht]
 \includegraphics[scale=0.3]{LeapingLlamas.png}
@@ -210,25 +209,6 @@ Leaping Llamas started to really take shape by deliverable 5. Previously, the pr
 \subsection{Future Work}
 Before the final submission we will implement different skins for the llama that the user can choose from. Aside from this the only thing we want to get fixed is the hitbox detection near the rear of the character. As for the far future plans for the project each member of our team will add the final version of the game to their Github.com accounts to showcase to potential employers.
 
-\begin{thebibliography}{1}
-
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-
-\end{thebibliography}
-
-\begin{IEEEbiography}{Michael Shell}
-Biography text here.
-\end{IEEEbiography}
-
-\begin{IEEEbiographynophoto}{John Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-\begin{IEEEbiographynophoto}{Jane Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
 \end{document}
 
 
